@@ -41,6 +41,10 @@ class CPU:
         self.alu("MUL", oper_a, oper_b)
         self.PC += 3
 
+    def asm_jmp(self):
+    def asm_jeq(self):
+    def asm_jne(self):
+
     def asm_hlt(self, oper_a, oper_b):
         return (0, False)
 
@@ -78,7 +82,7 @@ class CPU:
 
         # For now, we've just hardcoded a program:
 
-        program = [
+        """ program = [
             # From print8.ls8
             0b10000010,  # LDI R0,8
             0b00000000,
@@ -86,7 +90,7 @@ class CPU:
             0b01000111,  # PRN R0
             0b00000000,
             0b00000001,  # HLT
-        ]
+        ] """
 
         for instruction in program:
             self.ram[address] = instruction
